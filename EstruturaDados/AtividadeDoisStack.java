@@ -9,7 +9,7 @@ public class AtividadeDoisStack {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		boolean fila = true;
+		boolean pilha = true;
 		int opc;
 		
 		Stack<String> livros = new Stack<String>();
@@ -21,7 +21,7 @@ public class AtividadeDoisStack {
 		System.out.println("0 - Sair");
 		System.out.println("\n************************************");
 		
-		while (fila) {
+		while (pilha) {
 			System.out.print("\nDigite uma opção: ");
 			opc = sc.nextInt();
 			
@@ -29,7 +29,7 @@ public class AtividadeDoisStack {
 			case 1:
 				System.out.print("\nDigite o nome: ");
 				sc.nextLine();
-				livros.add(sc.nextLine());
+				livros.push(sc.nextLine());
 				System.out.println("\nPilha: \n");
 				for (String livro : livros) {
 					System.out.println(livro);
@@ -56,7 +56,7 @@ public class AtividadeDoisStack {
 				break;
 			case 0:
 				System.out.println("\nPrograma finalizado!");
-				fila = false;
+				pilha = false;
 				break;
 			default:
 				System.out.println("\nOpção inválida!");
